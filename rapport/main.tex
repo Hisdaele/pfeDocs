@@ -1,0 +1,45 @@
+\documentclass[12pt]{report}
+
+\include{extras/packages}
+
+\makeglossaries
+\include{extras/acronyms}
+
+\begin{document}
+    \include{extras/page-de-garde}
+    
+    \pagenumbering{roman}
+
+    \tableofcontents
+    \clearpage
+
+    \addcontentsline{toc}{chapter}{\listfigurename}
+    \listoffigures
+    \clearpage
+    
+    \addcontentsline{toc}{chapter}{\listtablename}
+    \listoftables
+    \clearpage
+
+    \printglossary[type=\acronymtype]
+    \clearpage
+
+
+
+
+    \pagenumbering{arabic}
+    %%Introduction Générale
+    \include{chapters/00-Introduction/main}
+
+    %%Contexte Général du projet
+    \include{chapters/01-ContexteGeneral/main}
+
+    %%Etude des systèmes ANPR
+    \include{chapters/02-EtudeANPR/main}
+
+    %%Conclusion Générale
+    \include{chapters/05-Conclusion/content}
+
+    \printbibliography[title=Bibliographie et Webographie]
+    
+\end{document}

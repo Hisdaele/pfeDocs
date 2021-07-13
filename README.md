@@ -1,0 +1,2 @@
+# Ce repertoire contient les documents pour mon projet de PFE sur le thème Système de Reconnaissance Automatique de Plaques d'Immatriculation Marocaines
+# Il contient un dossier pour le rapport et un dossier pour la présentation PPT
