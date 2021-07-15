@@ -2344,7 +2344,20 @@
     <bcf:datasource type="file" datatype="bibtex" glob="false">extras/references.bib</bcf:datasource>
   </bcf:bibdata>
   <bcf:section number="0">
-    <bcf:citekey order="1">mineq</bcf:citekey>
+    <bcf:citekey order="3">mineq</bcf:citekey>
+    <bcf:citekey order="4">mineq</bcf:citekey>
+    <bcf:citekey order="5">wikianpr</bcf:citekey>
+    <bcf:citekey order="6">akacemMaster</bcf:citekey>
+    <bcf:citekey order="7">doi:10.1177/0361198120954202</bcf:citekey>
+    <bcf:citekey order="8">doi:10.1177/0361198120954202</bcf:citekey>
+    <bcf:citekey order="9">autoVu</bcf:citekey>
+    <bcf:citekey order="10">lapiWeb</bcf:citekey>
+    <bcf:citekey order="11">lapiManual</bcf:citekey>
+    <bcf:citekey order="12">lapiManual</bcf:citekey>
+    <bcf:citekey order="13">HindeThesis</bcf:citekey>
+    <bcf:citekey order="14">NorMaster</bcf:citekey>
+    <bcf:citekey order="15">HindeThesis</bcf:citekey>
+    <bcf:citekey order="16">wikianpr</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nty">
