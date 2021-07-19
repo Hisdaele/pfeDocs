@@ -38,4 +38,11 @@
 \setcounter{secnumdepth}{3}
 \definecolor{Gray}{gray}{0.85}
 \pagestyle{headings}
+\newcommand*{\captionsource}[2]{%
+    \caption[{#1}]{%
+    #1%
+    \\\hspace{\linewidth}%
+    \textbf{Source:} #2%
+  }%
+}
 
