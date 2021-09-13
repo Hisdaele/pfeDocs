@@ -3,18 +3,17 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{geometry}
+\usepackage[top=2.5cm, bottom=2.5cm, left=3cm, right=2cm]{geometry}
 \usepackage{titlesec}
 \usepackage[T1]{fontenc}
 \usepackage[dvipsnames]{xcolor}
 \usepackage{float}
 \usepackage{hyperref}
-% \usepackage{fancyhdr}
-% \usepackage[Glenn]{fncychap}
+\usepackage{fancyhdr}
 \usepackage{biblatex}
 \usepackage{csquotes}
 \usepackage{wrapfig}
-\usepackage[acronym,toc]{glossaries}
+\usepackage[acronym,toc,nonumberlist]{glossaries}
 \usepackage{xcolor,colortbl}
 \usepackage{tikz}
 \usepackage{amsmath}
@@ -23,7 +22,8 @@
 \usepackage{algpseudocode}
 \usepackage{multirow}
 \usepackage{lscape}
-\usepackage{pdfpages}
+\usepackage{setspace}
+\usepackage{threeparttable}
 \usetikzlibrary{positioning}
 \addbibresource{extras/references.bib}
 
@@ -32,9 +32,6 @@
 
 
 \graphicspath{{images/}}
-\titleformat{\subsection}[block]{\hspace{3em}}{\thesubsection}{1em}{}
-\titleformat{\subsubsection}[block]{\hspace{6em}}{\thesubsection}{1em}{}
-\newgeometry{bottom=25mm,left=20mm,top=15mm,right=20mm}
 \hypersetup{
     colorlinks,
     citecolor=blue,
@@ -43,7 +40,6 @@
     urlcolor=blue
 }
 \definecolor{Gray}{gray}{0.85}
-\pagestyle{headings}
 \newcommand*{\captionsource}[2]{%
     \caption[{#1}]{%
     #1%
@@ -53,5 +49,17 @@
 }
 \setcounter{secnumdepth}{3}
 \setcounter{tocdepth}{3}
+\onehalfspacing
+\pagestyle{fancy}
+\lhead{\leftmark}
+\chead{}
+\rhead{}
+\lfoot{}
+\rfoot{\thepage}
+\rfoot{}
+\renewcommand{\headrulewidth}{2pt}
+\renewcommand{\footrulewidth}{1pt}
+
+
 
 
