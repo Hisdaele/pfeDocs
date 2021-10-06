@@ -41,7 +41,7 @@ Pour arriver à extraire le texte se trouvant sur un document, la technologie OC
         \caption{Segmentation des mots par projection verticale}
     \end{figure}
     \subsection{Reconnaissance de caractères}
-    Le but est d'identifier numériquement le caractère qui est en image. Pour y parvenir, il existe des techniques de reconnaissance qui peuvent classées en trois grands groupes:
+    Le but est d'identifier numériquement le caractère qui est en image. Pour y parvenir, il existe des techniques de reconnaissance qui peuvent être classées en trois grands groupes:
         \begin{enumerate}
             \item \textbf{La classification par caractéristiques (Features)}: une forme à reconnaître est représentée par un vecteur de valeurs numériques - appelées features en anglais - calculées à partir de cette forme. Le nombre de features est de l'ordre de 100 à 300. Si les features sont bien choisies, une classe de caractères (par exemple l'ensemble des A majuscules) sera représentée par un « nuage » contigu de points dans l'espace vectoriel des features. Le rôle du classificateur est de déterminer à quel nuage (donc à quelle classe de caractères) la forme à reconnaitre appartient le plus vraisemblablement. La classification fait généralement appel à divers types de réseaux de neurones artificiels entrainés sur de vastes bases de formes possibles.
             \item \textbf{Les méthodes métriques} : consistent à comparer directement la forme à reconnaître, au moyen d'algorithmes de distance, avec un ensemble de modèles appris. Ce type de méthode est peu utilisé et peu valorisé par les chercheurs, car souvent plus naïf et vraisemblablement moins efficace que les méthodes à base de features.

@@ -1,6 +1,6 @@
 \section{Développement de l'application mobile}
 Notre mission est de réaliser une simple application sous Android qui utilise le système SIRAM pour reconnaître les matricules des véhicules au Maroc sur des images ou des vidéos en temps réel. Pour réaliser une application de qualité, il est important de passer par deux étapes primordiales: l'analyse des besoins et la conception.  
-    \subsection{Analyse et spécifications des besoins}
+    \subsection{Analyse et spécification des besoins}
     Dans cette partie, nous allons tout simplement identifier les acteurs et leurs actions. Un acteur est une personne, une machine ou un autre système qui interagit avec le système étudié. Leurs différentes interactions avec le système constituent ce qu'on appelle cas d'utilisation.
 
     Pour ce qui concerne notre application, nous avons un unique acteur qui est l’\textbf{utilisateur}. Il peut accèder à l'application pour:
@@ -14,17 +14,17 @@ Notre mission est de réaliser une simple application sous Android qui utilise l
         \includegraphics[scale=0.6]{useCase.png}
         \caption{Diagramme de cas d'utilisation}
     \end{figure}
-    Ces fonctionnalités citées représentent les besoins fonctionnelles de notre application. Hors mis ce type de besoins, nous avons aussi les besoins non-fonctionnelles qui sont un ensemble des contraintes à respecter par l'application. Dans notre cas, on a:
+    Ces fonctionnalités citées représentent les besoins fonctionnels de notre application. Hors mis ce type de besoins, nous avons aussi les besoins non-fonctionnelles qui sont un ensemble des contraintes à respecter par l'application. Dans notre cas, on a:
     \begin{itemize}
         \item \textbf{L'ergonomie des interfaces}: les interfaces de l'application doivent être simples et conviviales pour l'utilisateur. On doit aussi limiter au maximum les encombrements.
         \item \textbf{La performance}: il s'agit principalement de la précision et la rapidité de la reconnaissance des plaques. En effet, notre application doit détecter le plus rapidement possible les plaques et identifier le numéro de plaque avec une grande précision. 
     \end{itemize}
 
     \subsection{Conception}
-    À partir d’une bonne analyse des besoins, on réalise la conception qui est l’une sinon la plus importante étape entrant dans le processus de développement d’une application. La conception se matérialise généralement par des diagrammes UML tels que les \textbf{diagrammes de classes}, les \textbf{diagrammes de séquence} et les \textbf{diagrammes d'activités}. Un diagramme de classes permet représenter les classes et les interfaces d'un systèmes ainsi que les relations entre elles. Contrairement à un diagramme de classes qui est statique, un diagramme de séquence est dynamique et traduit les intéractions entre acteurs et/ou le système pour un cas d'utilisation déterminé. Le déroulement d'un cas d'utilisation ou d'une méthode est présentée en utilisant un diagramme d'activités.
+    À partir d’une bonne analyse des besoins, on réalise la conception qui est l’une sinon la plus importante étape entrant dans le processus de développement d’une application. La conception se matérialise généralement par des diagrammes UML tels que les \textbf{diagrammes de classes}, les \textbf{diagrammes de séquence} et les \textbf{diagrammes d'activités}. Un diagramme de classes permet représenter les classes et les interfaces d'un systèmes ainsi que les relations entre elles. Contrairement à un diagramme de classes qui est statique, un diagramme de séquence est dynamique et traduit les intéractions entre acteurs et/ou le système pour un cas d'utilisation déterminé. Le déroulement d'un cas d'utilisation ou d'une méthode est présenté en utilisant un diagramme d'activités.
     
     
-    Pour mieux structurer notre application et faciliter ainsi les modifications et les maintenances, nous avons adopté pour une \textbf{architecture 3-tiers} (Figure \ref{fig:dc1}) c’est-à-dire composée de trois couches principales qui communiquent entre elles en offrant les services les unes aux autres:
+    Pour mieux structurer notre application et faciliter ainsi les modifications et les maintenances, nous avons opté pour une \textbf{architecture 3-tiers} (Figure \ref{fig:dc1}) c’est-à-dire composée de trois couches principales qui communiquent entre elles en offrant les services les unes aux autres:
     \begin{itemize}
         \item La \textbf{couche métier}: elle implémente la logique fonctionnelle de notre application. Elle est composée de plusieurs packages à savoir:
             \begin{itemize}
@@ -42,7 +42,7 @@ Notre mission est de réaliser une simple application sous Android qui utilise l
         
         \item La \textbf{couche persistance}: elle gère l’accès aux données et principalement la communication avec la base de données. Elle a été implémentée à travers un package appelé \textbf{\textit{dao}}. Nous y avons utilisé le \textbf{Design Pattern Singleton} pour assurer la création d'une seule instance de l'objet communiquant avec la base de données. 
         
-        \item La \textbf{couche présentation}: c’est la couche visible par l’utilisateur. Elle est composée des différentes interfaces graphiques de notre application. Nous l’avons regroupée dans un seul package appelé \textbf{\textit{ui}}. Ce package contient deux classes. Une pour décrivant la page principale et une autre décrivant la page secondaire où se réalise la reconnaissance des plaques en temps réel. 
+        \item La \textbf{couche présentation}: c’est la couche visible par l’utilisateur. Elle est composée des différentes interfaces graphiques de notre application. Nous les avons regroupées dans un seul package appelé \textbf{\textit{ui}}. Ce package contient deux classes. Une décrivant la page principale et une autre décrivant la page secondaire où se réalise la reconnaissance des plaques en temps réel. 
     \end{itemize}
     Cette architecture est illustrée à travers le diagramme de classes dans la figure \ref{fig:dc1}. La figure \ref{fig:ds1} montre comment l'utilisateur interagit avec le système à l'aide d'un diagramme de séquence. La figure \ref{fig:da1} est un diagramme d'activités représentant le déroulement de la reconnaissance des plaques en temps réel par le système.
     
@@ -61,7 +61,7 @@ Notre mission est de réaliser une simple application sous Android qui utilise l
         
         \item \textbf{Kotlin/Java}: pour développer les applications Android, on peut utiliser soit le langage de programmation Java soit le langage Kotlin ou même les deux à la fois. Presque similaires, ces deux langages sont interopérables: on peut appeler les méthodes d'une classe Java dans une classe Kotlin et vis versa. En ce qui nous concerne, nous avons choisi le langage Kotlin comme notre langage principal de développement d’une part parce que c’est le langage officiel conseillé par Google pour le développement des applications sous Android. D’autre part, nous avons préféré Kotlin à Java pour la simplicité de sa syntaxe qui rend le code moins verbeux. Par ailleurs, l’ajout de certains extensions comme \textbf{les Data Class, les coroutines} qui facilitent énormément le développement. Néanmoins nous avons utilisé certaines classes utiles écrites en Java par d'autres développeurs.  
         
-        \item \textbf{SQLite}: pour la base de données, nous avons opté SQLite qui un système de gestion de base de données à la fois puissant et léger et donc adapté pour une application mobile. Et comme recommandé par la documentation d'Android \cite{androiddocs}, nous avons utilisé la bibliothèque de persistence \textbf{\textit{Room}} qui fournit une couche d'abstraction sur SQLite pour permettre un accès fluide à la base de données.
+        \item \textbf{SQLite}: pour la base de données, nous avons opté pour SQLite qui un système de gestion de base de données à la fois puissant et léger et donc adapté pour une application mobile. Et comme recommandé par la documentation d'Android \cite{androiddocs}, nous avons utilisé la bibliothèque de persistence \textbf{\textit{Room}} qui fournit une couche d'abstraction sur SQLite pour permettre un accès fluide à la base de données.
         L'architecture de la bibliothèque \textit{Room} est décrite dans le figure \ref{fig:room}.
 
         \item \textbf{CameraX}: c'est une bibliothèque proposée par Android qui facilite l'utilisation de la Camera dans les applications Android. Elle offre déjà des services notamment \textbf{\textit{Image Analysis}} qui permet de faire des opérations de Machine Learning. Nous l'avons utilisé pour le cas de la reconnaissance en temps réel pour traiter chaque \textit{frame} renvoyé par la caméra.
